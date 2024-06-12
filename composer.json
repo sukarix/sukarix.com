@@ -1,0 +1,55 @@
+{
+  "name": "sukarix/application",
+  "type": "project",
+  "description": "The skeleton application for the Sukarix PHP framework.",
+  "keywords": ["sukarix", "framework", "fat-free"],
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "ext-redis": "*",
+    "sukarix/sukarix": "dev-main",
+    "ikkez/f3-mailer": "dev-master#972d715 as 1.2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "app/src"
+    }
+  },
+  "require-dev": {
+    "ext-xdebug": "*",
+    "fakerphp/faker": "^v1.23.1",
+    "friendsofphp/php-cs-fixer": "^v3.54.0",
+    "phpunit/php-code-coverage": "^10.1.14",
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "": [
+        "app/src",
+        "tests/src/"
+      ]
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "process-timeout": 600,
+    "preferred-install": "dist",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "github-protocols": [
+      "https"
+    ],
+    "allow-plugins": {
+      "php-http/discovery": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "csfix": [
+      "sudo phpdismod -s cli xdebug",
+      "./vendor/bin/php-cs-fixer fix --allow-risky yes",
+      "sudo phpenmod -s cli xdebug\n\n"
+    ]
+  }
+}

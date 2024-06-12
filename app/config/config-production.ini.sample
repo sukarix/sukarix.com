@@ -1,0 +1,26 @@
+[globals]
+; Stack trace verbosity. Assign values 1 to 3 for increasing verbosity levels. Zero (0) suppresses the stack trace.
+; This is the default value and it should be the assigned setting on a production server.
+DEBUG = 0
+
+; database settings
+db.driver = pgsql
+db.dsn = pgsql:host=localhost;port=5432;dbname=sukarix
+db.username = sukarix
+db.password =
+
+; Settings
+ORGANISATION = RIADVICE
+
+; time to cache any errors which occur; x-cache is installed on the server
+error.ttl = 60
+
+; set to development|testing|staging|production|local or whatever you like
+application.environment = production
+
+; log session queries
+log.level = info
+
+; turn javascript and css minification on and off
+MINIFY_CSS = TRUE
+MINIFY_JS = TRUE

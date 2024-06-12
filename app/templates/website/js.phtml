@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<js src="modernizr-latest.js"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<js src="jquery.cslider.js"/>
+<js src="headroom.min.js"/>
+<js src="jQuery.headroom.min.js"/>
+<js src="custom.js"/>
+
+<js src="core/common.js"/>
+<js src="core/locale.js"/>
+
+{{ \Sukarix\Helpers\Assets::instance()->renderGroup('footer') }}
+
+<script>
+    jQuery(document).ready(function () {
+        {{ \Sukarix\Helpers\Assets::instance()->currentJsLocale() }}
+        {{ \Sukarix\Helpers\Assets::instance()->setUserRole() }}
+        {{ \Sukarix\Helpers\Assets::instance()->initJsClasses() }}
+    });
+</script>
