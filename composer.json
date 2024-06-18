@@ -7,8 +7,7 @@
   "require": {
     "php": "^8.2",
     "ext-redis": "*",
-    "sukarix/sukarix": "dev-main",
-    "ikkez/f3-mailer": "dev-master#972d715 as 1.2.3"
+    "sukarix/sukarix": "dev-main"
   },
   "autoload": {
     "psr-4": {
@@ -17,6 +16,7 @@
   },
   "require-dev": {
     "ext-xdebug": "*",
+    "sukarix/statera": "dev-main",
     "fakerphp/faker": "^v1.23.1",
     "friendsofphp/php-cs-fixer": "^v3.54.0",
     "phpunit/php-code-coverage": "^10.1.14",

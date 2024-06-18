@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "189dfa488142de2ad564bca063c4d899",
+    "content-hash": "cfce0328dece945172af6980ea2bd228",
     "packages": [
         {
             "name": "bcosca/fatfree-core",
@@ -1017,19 +1017,18 @@
         },
         {
             "name": "ikkez/f3-mailer",
-            "version": "dev-master",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ikkez/f3-mailer.git",
-                "reference": "972d715"
+                "reference": "972d715ae38b799955647678da6a02bbb2daaa8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ikkez/f3-mailer/zipball/972d715",
-                "reference": "972d715",
+                "url": "https://api.github.com/repos/ikkez/f3-mailer/zipball/972d715ae38b799955647678da6a02bbb2daaa8d",
+                "reference": "972d715ae38b799955647678da6a02bbb2daaa8d",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -2214,17 +2213,62 @@
             "time": "2024-06-03T14:23:41+00:00"
         },
         {
+            "name": "sukarix/f3-access",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sukarix/f3-access.git",
+                "reference": "5cb89fb7df24da2d961383980a26449774b51188"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sukarix/f3-access/zipball/5cb89fb7df24da2d961383980a26449774b51188",
+                "reference": "5cb89fb7df24da2d961383980a26449774b51188",
+                "shasum": ""
+            },
+            "require": {
+                "bcosca/fatfree-core": "3.*"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "Route access control for the PHP Fat-Free Framework",
+            "homepage": "https://github.com/sukarix/f3-access",
+            "keywords": [
+                "F3",
+                "access control",
+                "acl",
+                "fatfree",
+                "permissions"
+            ],
+            "support": {
+                "issues": "https://github.com/sukarix/f3-access/issues",
+                "source": "https://github.com/sukarix/f3-access"
+            },
+            "time": "2024-06-17T09:29:34+00:00"
+        },
+        {
             "name": "sukarix/sukarix",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sukarix/sukarix.git",
-                "reference": "932bbce8d8fcd8f0c7ca17f19b240f2d85fa0e13"
+                "reference": "2c35bfcd7fd43a411f59ecb440c634c380fb6f16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sukarix/sukarix/zipball/932bbce8d8fcd8f0c7ca17f19b240f2d85fa0e13",
-                "reference": "932bbce8d8fcd8f0c7ca17f19b240f2d85fa0e13",
+                "url": "https://api.github.com/repos/sukarix/sukarix/zipball/2c35bfcd7fd43a411f59ecb440c634c380fb6f16",
+                "reference": "2c35bfcd7fd43a411f59ecb440c634c380fb6f16",
                 "shasum": ""
             },
             "require": {
@@ -2241,7 +2285,7 @@
                 "guanguans/notify": "^1.28.0",
                 "ikkez/f3-cortex": "^v1.7.7",
                 "ikkez/f3-events": "^1.0",
-                "ikkez/f3-mailer": "dev-master#972d715 as 1.2.3",
+                "ikkez/f3-mailer": "1.2.3",
                 "kevinlebrun/colors.php": "^1.0.3",
                 "marc-mabe/php-enum": "^v4.7.0",
                 "matthiasmullie/minify": "^1.3.73",
@@ -2250,8 +2294,8 @@
                 "php": "^8.2",
                 "respect/validation": "^2.3.7",
                 "robmorgan/phinx": "^0.16.1",
-                "tracy/tracy": "^v2.10.7",
-                "xfra35/f3-access": "^1.2.2"
+                "sukarix/f3-access": "^1.2.3",
+                "tracy/tracy": "^v2.10.7"
             },
             "require-dev": {
                 "ext-xdebug": "*",
@@ -2266,6 +2310,9 @@
                 "squizlabs/php_codesniffer": "^3.9.2",
                 "vimeo/psalm": "^5.23.1",
                 "wapmorgan/php-deprecation-detector": "^2.0.33"
+            },
+            "suggest": {
+                "ikkez/f3-middleware": "A middleware router plugin for PHP Fat-Free Framework"
             },
             "default-branch": true,
             "type": "library",
@@ -2300,7 +2347,7 @@
                 "issues": "https://github.com/suakrix/suakrix/issues",
                 "source": "https://github.com/suakrix/suakrix"
             },
-            "time": "2024-06-11T20:59:19+00:00"
+            "time": "2024-06-17T15:09:55+00:00"
         },
         {
             "name": "symfony/config",
@@ -3290,47 +3337,6 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
-        },
-        {
-            "name": "xfra35/f3-access",
-            "version": "v1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xfra35/f3-access.git",
-                "reference": "de8e697e3f61b7d4e0d71c448346f38162677796"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xfra35/f3-access/zipball/de8e697e3f61b7d4e0d71c448346f38162677796",
-                "reference": "de8e697e3f61b7d4e0d71c448346f38162677796",
-                "shasum": ""
-            },
-            "require": {
-                "bcosca/fatfree-core": "3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "description": "Route access control for the PHP Fat-Free Framework",
-            "homepage": "https://github.com/xfra35/f3-access",
-            "keywords": [
-                "F3",
-                "access control",
-                "fatfree",
-                "permissions"
-            ],
-            "support": {
-                "issues": "https://github.com/xfra35/f3-access/issues",
-                "source": "https://github.com/xfra35/f3-access/tree/v1.2.2"
-            },
-            "time": "2021-04-29T16:52:25+00:00"
         }
     ],
     "packages-dev": [
@@ -3789,16 +3795,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.58.1",
+            "version": "v3.59.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "04e9424025677a86914b9a4944dbbf4060bb0aff"
+                "reference": "30ba9ecc2b0e5205e578fe29973c15653d9bfd29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/04e9424025677a86914b9a4944dbbf4060bb0aff",
-                "reference": "04e9424025677a86914b9a4944dbbf4060bb0aff",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/30ba9ecc2b0e5205e578fe29973c15653d9bfd29",
+                "reference": "30ba9ecc2b0e5205e578fe29973c15653d9bfd29",
                 "shasum": ""
             },
             "require": {
@@ -3828,16 +3834,16 @@
                 "symfony/stopwatch": "^5.4 || ^6.0 || ^7.0"
             },
             "require-dev": {
-                "facile-it/paraunit": "^1.3 || ^2.0",
-                "infection/infection": "^0.27.11",
+                "facile-it/paraunit": "^1.3 || ^2.3",
+                "infection/infection": "^0.29.5",
                 "justinrainbow/json-schema": "^5.2",
                 "keradus/cli-executor": "^2.1",
                 "mikey179/vfsstream": "^1.6.11",
                 "php-coveralls/php-coveralls": "^2.7",
                 "php-cs-fixer/accessible-object": "^1.1",
-                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.4",
-                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.4",
-                "phpunit/phpunit": "^9.6 || ^10.5.5 || ^11.0.2",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.5",
+                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.5",
+                "phpunit/phpunit": "^9.6.19 || ^10.5.21 || ^11.2",
                 "symfony/var-dumper": "^5.4 || ^6.0 || ^7.0",
                 "symfony/yaml": "^5.4 || ^6.0 || ^7.0"
             },
@@ -3852,7 +3858,10 @@
             "autoload": {
                 "psr-4": {
                     "PhpCsFixer\\": "src/"
-                }
+                },
+                "exclude-from-classmap": [
+                    "src/Fixer/Internal/*"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3877,7 +3886,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.58.1"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.59.3"
             },
             "funding": [
                 {
@@ -3885,7 +3894,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-29T16:39:07+00:00"
+            "time": "2024-06-16T14:17:03+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4347,28 +4356,28 @@
         },
         {
             "name": "react/dns",
-            "version": "v1.12.0",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "c134600642fa615b46b41237ef243daa65bb64ec"
+                "reference": "eb8ae001b5a455665c89c1df97f6fb682f8fb0f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/c134600642fa615b46b41237ef243daa65bb64ec",
-                "reference": "c134600642fa615b46b41237ef243daa65bb64ec",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/eb8ae001b5a455665c89c1df97f6fb682f8fb0f5",
+                "reference": "eb8ae001b5a455665c89c1df97f6fb682f8fb0f5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "react/cache": "^1.0 || ^0.6 || ^0.5",
                 "react/event-loop": "^1.2",
-                "react/promise": "^3.0 || ^2.7 || ^1.2.1"
+                "react/promise": "^3.2 || ^2.7 || ^1.2.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.6 || ^5.7 || ^4.8.36",
-                "react/async": "^4 || ^3 || ^2",
-                "react/promise-timer": "^1.9"
+                "react/async": "^4.3 || ^3 || ^2",
+                "react/promise-timer": "^1.11"
             },
             "type": "library",
             "autoload": {
@@ -4411,7 +4420,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/dns/issues",
-                "source": "https://github.com/reactphp/dns/tree/v1.12.0"
+                "source": "https://github.com/reactphp/dns/tree/v1.13.0"
             },
             "funding": [
                 {
@@ -4419,7 +4428,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-11-29T12:41:06+00:00"
+            "time": "2024-06-13T14:18:03+00:00"
         },
         {
             "name": "react/event-loop",
@@ -4730,12 +4739,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "cac81dc38cb1ea099552433245d0790b6e172211"
+                "reference": "a36c08c63614a0da558615424f8b37b3216416b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/cac81dc38cb1ea099552433245d0790b6e172211",
-                "reference": "cac81dc38cb1ea099552433245d0790b6e172211",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a36c08c63614a0da558615424f8b37b3216416b6",
+                "reference": "a36c08c63614a0da558615424f8b37b3216416b6",
                 "shasum": ""
             },
             "conflict": {
@@ -4961,7 +4970,7 @@
                 "gos/web-socket-bundle": "<1.10.4|>=2,<2.6.1|>=3,<3.3",
                 "gree/jose": "<2.2.1",
                 "gregwar/rst": "<1.0.3",
-                "grumpydictator/firefly-iii": "<6.1.7",
+                "grumpydictator/firefly-iii": "<6.1.17",
                 "gugoan/economizzer": "<=0.9.0.0-beta1",
                 "guzzlehttp/guzzle": "<6.5.8|>=7,<7.4.5",
                 "guzzlehttp/psr7": "<1.9.1|>=2,<2.4.5",
@@ -5055,7 +5064,7 @@
                 "lms/routes": "<2.1.1",
                 "localizationteam/l10nmgr": "<7.4|>=8,<8.7|>=9,<9.2",
                 "luyadev/yii-helpers": "<1.2.1",
-                "magento/community-edition": "<2.4.3.0-patch3|>=2.4.4,<2.4.5",
+                "magento/community-edition": "<2.4.5|==2.4.5|>=2.4.5.0-patch1,<2.4.5.0-patch8|==2.4.6|>=2.4.6.0-patch1,<2.4.6.0-patch6|==2.4.7",
                 "magento/core": "<=1.9.4.5",
                 "magento/magento1ce": "<1.9.4.3-dev",
                 "magento/magento1ee": ">=1,<1.14.4.3-dev",
@@ -5281,7 +5290,7 @@
                 "slim/slim": "<2.6",
                 "slub/slub-events": "<3.0.3",
                 "smarty/smarty": "<4.5.3|>=5,<5.1.1",
-                "snipe/snipe-it": "<=6.2.2",
+                "snipe/snipe-it": "<6.4.2",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
                 "spatie/browsershot": "<3.57.4",
@@ -5423,7 +5432,7 @@
                 "winter/wn-dusk-plugin": "<2.1",
                 "winter/wn-system-module": "<1.2.4",
                 "wintercms/winter": "<=1.2.3",
-                "woocommerce/woocommerce": "<6.6",
+                "woocommerce/woocommerce": "<6.6|>=8.8,<8.8.5|>=8.9,<8.9.3",
                 "wp-cli/wp-cli": ">=0.12,<2.5",
                 "wp-graphql/wp-graphql": "<=1.14.5",
                 "wp-premium/gravityforms": "<2.4.21",
@@ -5525,7 +5534,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-10T22:04:51+00:00"
+            "time": "2024-06-17T23:04:35+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -5881,6 +5890,67 @@
                 }
             ],
             "time": "2023-02-07T11:34:05+00:00"
+        },
+        {
+            "name": "sukarix/statera",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sukarix/statera.git",
+                "reference": "6aae0844d30645e709c68cfa3dd6c9f4a3fc9d6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sukarix/statera/zipball/6aae0844d30645e709c68cfa3dd6c9f4a3fc9d6f",
+                "reference": "6aae0844d30645e709c68cfa3dd6c9f4a3fc9d6f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "friendsofphp/php-cs-fixer": "^v3.54.0",
+                "roave/security-advisories": "dev-latest"
+            },
+            "suggest": {
+                "ikkez/f3-middleware": "A middleware router plugin for PHP Fat-Free Framework"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sukarix\\": "src/Sukarix/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "RIADVICE",
+                    "email": "contact@riadvice.tn"
+                },
+                {
+                    "name": "Ghazi Triki",
+                    "email": "ghazi.triki@riadvice.tn"
+                }
+            ],
+            "description": "Statera - Statera is a unit testing kit designed specifically for the Sukarix Framework.",
+            "homepage": "https://sukarix.com",
+            "keywords": [
+                "fat-free",
+                "framework",
+                "php",
+                "sukarix",
+                "testing-tools"
+            ],
+            "support": {
+                "issues": "https://github.com/suakrix/statera/issues",
+                "source": "https://github.com/suakrix/statera"
+            },
+            "time": "2024-06-18T13:04:44+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -6432,18 +6502,11 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "ikkez/f3-mailer",
-            "version": "9999999-dev",
-            "alias": "1.2.3",
-            "alias_normalized": "1.2.3.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "sukarix/sukarix": 20,
-        "ikkez/f3-mailer": 20,
+        "sukarix/statera": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
