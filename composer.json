@@ -7,7 +7,15 @@
   "require": {
     "php": "^8.2",
     "ext-redis": "*",
-    "sukarix/sukarix": "dev-main"
+    "ext-pgsql": "*",
+    "ext-bcmath": "*",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-intl": "*",
+    "ext-mbstring": "*",
+    "ext-simplexml": "*",
+    "ext-zip": "*",
+    "sukarix/sukarix": "~0.2"
   },
   "autoload": {
     "psr-4": {
