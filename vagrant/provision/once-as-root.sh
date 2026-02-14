@@ -43,32 +43,36 @@ info "Install borgbackup"
 sudo add-apt-repository -y ppa:costamagnagianfranco/borgbackup
 sudo apt install -y borgbackup
 
-info "Install PHP 8.3 with its dependencies"
-sudo apt install -y php8.3-curl php8.3-cli php8.3-intl php8.3-redis php8.3-gd php8.3-fpm php8.3-pgsql \
-  php8.3-mbstring php8.3-xml php8.3-bcmath php8.3-zip php8.3-xdebug
+info "Install PHP 8.5 with its dependencies"
+sudo apt install -y php8.5-curl php8.5-cli php8.5-intl php8.5-redis php8.5-gd php8.5-fpm php8.5-pgsql \
+  php8.5-mbstring php8.5-xml php8.5-bcmath php8.5-zip php8.5-xdebug
 
 info "Install composer"
 sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 info "Installing PostgreSQL"
-sudo percona-release setup ppg-16.2
-sudo apt install -y percona-postgresql-16 \
-  percona-postgresql-16-repack \
-  percona-postgresql-16-pgaudit \
-  percona-pg-stat-monitor16 \
-  percona-pgbackrest \
+sudo percona-release setup ppg-18
+sudo apt install -y percona-postgresql-18 \
+  percona-postgresql-18-repack \
+  percona-postgresql-18-pgaudit \
+  percona-pg-stat-monitor18 \
   percona-patroni \
-  percona-pgaudit16-set-user \
+  percona-pgaudit18-set-user \
   percona-pgbadger \
-  percona-postgresql-16-wal2json \
-  percona-pg-stat-monitor16 \
+  percona-postgresql-18-wal2json \
+  percona-pg-stat-monitor18 \
   percona-postgresql-contrib
 
+info "Remove non used dependencies"
+sudo apt purge ansible ansible-core -y
+sudo apt autoremove -y
+sudo apt autoclean -y
+
 info "Configure PHP-FPM"
-sudo rm /etc/php/8.3/fpm/pool.d/www.conf
-sudo ln -s /app/vagrant/dev/php-fpm/www.conf /etc/php/8.3/fpm/pool.d/www.conf
-sudo rm /etc/php/8.3/mods-available/xdebug.ini
-sudo ln -s /app/vagrant/dev/php-fpm/xdebug.ini /etc/php/8.3/mods-available/xdebug.ini
+sudo rm /etc/php/8.5/fpm/pool.d/www.conf
+sudo ln -s /app/vagrant/dev/php-fpm/www.conf /etc/php/8.5/fpm/pool.d/www.conf
+sudo rm /etc/php/8.5/mods-available/xdebug.ini
+sudo ln -s /app/vagrant/dev/php-fpm/xdebug.ini /etc/php/8.5/mods-available/xdebug.ini
 echo "Done!"
 
 info "Configure NGINX"
